@@ -1,9 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
-from DatabaseAccess import db
+from api_server import db
 #from sqlalchemy.orm import relationship, backref
 #from datetime import datetime
-
-
 
 class Shops(db.Model):
 

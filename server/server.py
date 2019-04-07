@@ -1,6 +1,5 @@
 from flask import Flask, render_template
-
-app = Flask(__name__, static_folder="../front/build/static", template_folder="../front/build")
+from api_server import app
 
 @app.route("/")
 def index():
