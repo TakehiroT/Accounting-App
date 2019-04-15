@@ -1,10 +1,12 @@
 import { connect } from "react-redux";
 import Login from "../Components/LoginComponent";
-import { inputName } from "../Actions/LoginActions";
+import { inputName, inputPass, postShopData} from "../Actions/LoginActions";
 
 const mapStateToProps = (state) => {
   return {
-    name: state.LoginReducer.name
+    name: state.LoginReducer.name,
+    pass: state.LoginReducer.pass,
+    data: state.LoginReducer.data
   }
 }
 
@@ -13,6 +15,12 @@ const mapDispatchToProps = ( dispatch ) => {
     inputName(name){
       dispatch(inputName(name));
     },
+    inputPass(pass){
+      dispatch(inputPass(pass));
+    },
+    postShopData(){
+      dispatch(postShopData());
+    }
   };
 }
 

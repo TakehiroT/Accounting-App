@@ -6,9 +6,9 @@ class Login extends React.Component {
     return(
       <AllArea>
         <Title>ログインページ</Title>
-        <div><InputField placeholder="店舗名" onChange={(e)=>{this.props.inputName(e.target.value)}}/></div>
-        <div><InputField placeholder="パスワード"/></div>
-        <LoginButton>ログイン</LoginButton>
+        <div><InputField placeholder="店舗名" onChange={(e) => {this.props.inputName(e.target.value)}}/></div>
+        <div><InputField placeholder="パスワード" onChange={(e) => this.props.inputPass(e.target.value)}/></div>
+        <LoginButton onClick={()=> {this.props.postShopData()}}>ログイン</LoginButton>
       </AllArea>
     );
   }
